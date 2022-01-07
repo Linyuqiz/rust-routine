@@ -5,16 +5,17 @@ use std::time::Duration;
 
 #[tokio::main]
 async fn main() {
-
     // Generate Theme Pattern：http://patorjk.com/software/taag/
-    println!(r"
+    println!(
+        r"
             ____                   ____                             __
            / __ \ ____ _ __  __   / __ \ ___   ____   ____   _____ / /_
           / / / // __ `// / / /  / /_/ // _ \ / __ \ / __ \ / ___// __/
          / /_/ // /_/ // /_/ /  / _, _//  __// /_/ // /_/ // /   / /_
         /_____/ \__,_/ \__, /  /_/ |_| \___// .___/ \____//_/    \__/
                       /____/               /_/
-    ");
+    "
+    );
 
     let mut token = String::new();
     let mut param = String::new();

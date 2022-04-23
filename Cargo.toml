@@ -1,6 +1,7 @@
 [workspace]
 members = [
-    "base/*",
+    "algorithm/*",
+    "grammar/*",
     "practice/*",
     "training/*",
 ]

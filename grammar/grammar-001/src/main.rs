@@ -1,10 +1,8 @@
-use crate::question_one::TrafficLight;
-use crate::question_three::{calculate_area, Square};
-use crate::question_two::sum;
+use crate::question::TrafficLight;
+use crate::question::{calculate_area, Square};
+use crate::question::sum;
 
-mod question_one;
-mod question_three;
-mod question_two;
+mod question;
 
 fn main() {
     // question one

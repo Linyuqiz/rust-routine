@@ -1,4 +1,5 @@
-mod common_template;
+mod core;
+mod extention;
 
 fn main() {
     println!("Hello, world!");

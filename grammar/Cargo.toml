@@ -1,8 +1,11 @@
 [package]
+edition = "2021"
 name = "grammar"
 version = "0.1.0"
-edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+macros = {path = "../macros"}
+mockall = "0.11.0"
+cfg-if = "1.0"

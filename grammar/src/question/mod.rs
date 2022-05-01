@@ -1,5 +1,8 @@
 use std::f32::consts::PI;
 
+#[cfg(test)]
+mod tests;
+
 #[derive(Debug)]
 #[allow(dead_code)]
 pub(crate) enum TrafficLight {
@@ -8,6 +11,7 @@ pub(crate) enum TrafficLight {
     Yellow,
 }
 
+#[allow(dead_code)]
 impl TrafficLight {
     pub(crate) fn time(&self) -> u32 {
         match self {
@@ -56,10 +60,12 @@ impl Calculate for Square {
     }
 }
 
+#[allow(dead_code)]
 pub(crate) fn calculate_area<T: Calculate>(shape: T) -> u32 {
     shape.area()
 }
 
+#[allow(dead_code)]
 pub(crate) fn sum(vec: &[u32]) -> Option<u32> {
     let mut sum: u32 = 0;
     for value in vec {

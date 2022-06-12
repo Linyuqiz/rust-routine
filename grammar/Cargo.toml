@@ -2,6 +2,7 @@
 edition = "2021"
 name = "grammar"
 version = "0.1.0"
+build = "build.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -9,3 +10,7 @@ version = "0.1.0"
 macros = {path = "../macros"}
 mockall = "0.11.0"
 cfg-if = "1.0"
+libc = "0.2"
+
+[build-dependencies]
+cc = "1.0"

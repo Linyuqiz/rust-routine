@@ -1,9 +1,0 @@
-app_name: day-report
-version: 1.0.0
-user_infos:
-  - name: Axemc
-    param: 11
-    token: 22
-  # - name: Axemc
-    # param: 11
-    # token: 22

@@ -1,10 +1,10 @@
-extern crate serde_yaml;
-extern crate serde;
+use serde;
+use serde_yaml;
 
 use chrono::Local;
+use serde::{Deserialize, Serialize};
 use serde_json::value::Value;
 use std::collections::HashMap;
-use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 struct App {
@@ -38,16 +38,20 @@ async fn main() {
     let app: App = serde_yaml::from_str(yaml_str).expect("app.yaml read failed!");
 
     for user in app.user_infos.iter() {
-        if let Ok(result) = execute_report(user.token.parse().unwrap(), user.param.parse().unwrap()).await {
+        if let Ok(result) =
+            execute_report(user.token.parse().unwrap(), user.param.parse().unwrap()).await
+        {
             println!("{:?} --- {:?} --- {}", Local::now(), result, user.name);
         } else {
-            println!("this daily report failed!");    
+            println!("this daily report failed!");
         }
     }
-
 }
 
-async fn execute_report(token: String,params: Value,) -> Result<HashMap<String, Value>, reqwest::Error> {
+async fn execute_report(
+    token: String,
+    params: Value,
+) -> Result<HashMap<String, Value>, reqwest::Error> {
     let return_status = reqwest::Client::new()
         .post("https://stu.eurasia.edu/yqsb/jkdj/save?token=".to_owned() + &*token)
         .json(&params)

@@ -4,5 +4,5 @@ mod macros;
 mod question;
 
 fn main() {
-    print!("Hello, world!");
+    println!("Hello, world!");
 }
